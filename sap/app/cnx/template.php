@@ -14,23 +14,18 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Connect ERP/e-commerce</a>
+      <a class="navbar-brand" href="index.php">Connect ERP/e-commerce</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.php">Accueil</a></li>
-      <li><a href="#">Boutiques</a></li>
-      <li><a href="#">Produits</a></li>
+      <li><a href="stores.php">Boutiques</a></li>
+      <li><a href="products.php">Produits</a></li>
       <li><a href="customer.php">Clients</a></li>
       <li><a href="invoices.php">Facturation</a></li>
     </ul>
   </div>
 </nav>
   
-<div class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
-</div>
-
 </body>
 <script src='js/filter.js'></script>
 <!-- jQuery library -->
