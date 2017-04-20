@@ -1,5 +1,10 @@
 /*======== GLOBAL ========*/
-b
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+h2, h3{
+  text-align: center;
+}
 h1, h2{
 	text-decoration: underline;
   font-weight: bold;
@@ -10,6 +15,9 @@ h1, h2{
 }
 .container h2{
   text-align: center;
+}
+span{
+  color: red;
 }
 /*======== END OF GLOBAL ========*/
 
@@ -71,3 +79,9 @@ h1, h2{
   background-color: #f1f1f1;
 }
 /*======== END OF ORDER_LIST ========*/
+
+/*======= STORE PORTFOLIO ======*/
+.portfolio-item {
+    margin-bottom: 25px;
+}
+/*======= END OF PORTFOLIO =====*/

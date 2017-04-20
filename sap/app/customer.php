@@ -1,4 +1,4 @@
-<?php
+f<?php
 require 'cnx/template.php';
 require 'cnx/cnx.php';
 //===== LIST CUSTOMERS ===
@@ -36,7 +36,7 @@ $add = $client->call($session, 'customer_address.list', '1');
         <td><?=$custs['firstname']?></td>    
         <td><?=$custs['email']?></td>   
         <td>
-          <button type="button" name="view_cust" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</button>
+          <a href="cust_info.php" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</a>
           <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-lg">

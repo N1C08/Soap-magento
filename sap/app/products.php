@@ -26,25 +26,28 @@ $products = $client->call($session, 'catalog_product.list');
         $infos = $client->call($session, 'cataloginventory_stock_item.list', $data);
         //var_dump($result); 
 ?>
-        	<tr>       
-            <td><?=$product['sku']?></td>
-            <?php foreach($infos as $stock){?>        
-            <td><?=$stock['qty']?> pièce(s) </td>
-            <?php }?>
-            <td>
-            <form class="form-inline">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Quantité">
-              </div>
-              <button type="submit" name="qty" class="btn btn-default">Update</button>
-              <?php
-              if (isset($_POST['qty'])) {
-                var_dump('salut');
-              }
-              ?>
-              </form>
-            </td>         
-          </tr>
+    <tr> 
+      <td><?=$product['sku']?></td>
+
+      <?php foreach($infos as $stock){?>  
+
+      <td><?=$stock['qty']?> pièce(s) </td>
+
+      <?php }?>
+      <td>
+      <form class="form-inline" method="post" target="#">
+      <div class="form-group">
+        <input type="number" class="form-control" placeholder="Quantité">
+      </div>
+      <button type="submit" name="qty" class="btn btn-default">Update</button>
+      <?php 
+      if (!empty($_POST['qty'])) {
+        echo "<h2>Inventaire Produits</h2>";
+      }
+      ?>
+    </form>
+    </td>         
+  </tr>
 <?php }  ?>
 </table>
 </div>
