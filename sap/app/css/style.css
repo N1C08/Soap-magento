@@ -1,0 +1,72 @@
+/*======== GLOBAL ========*/
+b
+h1, h2{
+	text-decoration: underline;
+  font-weight: bold;
+}
+.container{
+  width: 90%;
+}
+.container h2{
+  text-align: center;
+}
+/*======== END OF GLOBAL ========*/
+
+/*======== NAVBAR ======*/
+/*======== END OF NAVBAR =====*/
+
+/*======== ORDER_INFO ========*/
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
+
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
+
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
+/*======== END OF ORDER_INFO ========*/
+
+/*======== ORDER_LIST ========*/
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+/*======== END OF ORDER_LIST ========*/
