@@ -6,6 +6,7 @@ h1, h2{
 }
 .container{
   width: 90%;
+  margin-bottom: 5%;
 }
 .container h2{
   text-align: center;

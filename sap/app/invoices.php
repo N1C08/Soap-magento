@@ -27,21 +27,21 @@ $result = $client->call($session, 'order.list');
   </tr>
   
   
-<?php  foreach($result as $order){ 
-  echo "<tr>";       
-        echo "<td>".($order['increment_id'])." </td> ";        
-        echo "<td>".($order['store_name'])." </td> ";        
-        echo "<td>".($order['billing_name'])." </td> ";    
-        echo "<td>".($order['status'])." </td> "; 
+<?php  foreach($result as $order){ ?>
+  <tr>       
+        <td><?=$order['increment_id']?></td>        
+        <td><?=$order['store_name']?></td>        
+        <td><?=$order['billing_name']?></td>    
+        <td><?=$order['status']?></td> 
+        <td>
+          <form class="form-inline" action='order_info.php' target="blank"> 
+            <button type="submit" class="btn btn-info">Voir</button>
+          </form>
+        </td>
+  </tr>
+<?php     
+    } 
 ?>
-      <td>
-        <form class="form-inline" action='order_info.php' target="blank"> 
-          <button type="submit" class="btn btn-info">Voir</button>
-        </form>
-      </td>
-<?php 
-    echo "</tr>";    
-    }        ?>
   
 </table>
 <!--===== END OF LIST INVOICES ====-->

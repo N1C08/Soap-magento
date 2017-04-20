@@ -29,37 +29,34 @@ $add = $client->call($session, 'customer_address.list', '1');
   </tr>
   
   
-<?php  foreach($cust as $custs){ 
-  echo "<tr>";       
-        echo "<td>".($custs['customer_id'])." </td> ";        
-        echo "<td>".($custs['lastname'])." </td> ";        
-        echo "<td>".($custs['firstname'])." </td> ";    
-        echo "<td>".($custs['email'])." </td> "; 
-?>
-      <td>
-        <button type="button" name="view_cust" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-      </td>
-<?php 
-    echo "</tr>";    
-    }        ?>
+<?php  foreach($cust as $custs){ ?>
+  <tr>     
+        <td><?=$custs['customer_id']?></td>        
+        <td><?=$custs['lastname']?></td>        
+        <td><?=$custs['firstname']?></td>    
+        <td><?=$custs['email']?></td>   
+        <td>
+          <button type="button" name="view_cust" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <p></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+  </tr>
+<?php  }  ?>
   
 </table>
 <!--===== END OF CUSTOMER ===-->
