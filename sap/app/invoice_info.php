@@ -2,6 +2,8 @@
 require 'cnx/cnx.php';
 require 'cnx/template.php';
 
+//===== INVOICES INFOS ====
+
 $invoice_info = $client->call($session, 'sales_order.info', $_GET['id']);
 $ship=$invoice_info['shipping_address'];
 $add=$invoice_info['billing_address'];
@@ -9,6 +11,8 @@ $product=$invoice_info['items'][0];
 $pay=$invoice_info['payment'];
 $history=$invoice_info['status_history'];
 //var_dump($invoice_info);
+//===== END OF INVOICES INFOS ====
+
 ?>
 
 <div class="container">

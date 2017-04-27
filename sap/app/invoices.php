@@ -2,15 +2,13 @@
 require 'cnx/template.php';
 require 'cnx/cnx.php';
 
-//===== LIST INVOICES ====
+//=====CALL LIST INVOICES ====
 $result = $client->call($session, 'order.list'); 
 //var_dump ($result);
 //===== END OF LIST INVOICES ====
 
-//===== INVOICES INFOS ====
-//===== END OF INVOICES INFOS ====
-
 ?>
+
 <div class="container">
 <!--===== LIST INVOICES ====-->
 <h2>Factures Clients</h2>
@@ -34,11 +32,10 @@ $result = $client->call($session, 'order.list');
         <td><?=$order['billing_name']?></td>    
         <td><?=$order['status']?></td> 
         <td>
-          <a href="invoice_info.php?id=<?=$order['increment_id']?>" type="button" class="btn btn-info "  >Voir</a>
-          <!-- Modal -->
-          
-          
+          <a href="invoice_info.php?id=<?=$order['increment_id']?>" type="button" class="btn btn-info">Voir</a>
+         <!--data-toggle="modal" data-target="#myModal"-->
 
+          <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">

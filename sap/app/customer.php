@@ -25,7 +25,7 @@ $add = $client->call($session, 'customer_address.list', '1');
     <th style="width:25%;">Prénom</th>
     <th style="width:25%;">Nom </th>
     <th style="width:25%;">Email</th>
-    <th style="width:25%;">Fiche client</th>
+  <!--  <th style="width:25%;">Fiche client</th> -->
   </tr>
   
   
@@ -36,7 +36,7 @@ $add = $client->call($session, 'customer_address.list', '1');
         <td><?=$custs['firstname']?></td>    
         <td><?=$custs['email']?></td>   
         <td>
-          <a href="cust_info.php" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</a>
+        <!--  <a href="cust_info.php" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</a> -->
           <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-lg">
