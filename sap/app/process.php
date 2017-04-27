@@ -2,9 +2,7 @@
 
 <?php
 
-
-$client = new SoapClient('http://olivier.wanalike.fr/magento/index.php/api/soap/?wsdl'); // TODO : change url
-$session = $client->login('magentolive', 'magento23');
+require 'cnx/cnx.php';
               
 // continuation of process.php
 $qty = $_POST["qty"];
