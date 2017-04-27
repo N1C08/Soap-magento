@@ -1,4 +1,4 @@
-f<?php
+<?php
 require 'cnx/template.php';
 require 'cnx/cnx.php';
 //===== LIST CUSTOMERS ===
