@@ -34,14 +34,17 @@ $result = $client->call($session, 'order.list');
         <td><?=$order['billing_name']?></td>    
         <td><?=$order['status']?></td> 
         <td>
-          <a href="invoice_info.php" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</a>
+          <a href="invoice_info.php?id=<?=$order['increment_id']?>" type="button" class="btn btn-info "  >Voir</a>
           <!-- Modal -->
+          
+          
+
           <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Modal Header</h4>
+                  <h4 class="modal-title">Modal Header</h4><?=$order['increment_id']?>
                 </div>
                 <div class="modal-body">
                   <p></p>

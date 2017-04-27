@@ -1,7 +1,8 @@
 <?php 
 require 'cnx/cnx.php';
+require 'cnx/template.php';
 
-$invoice_info = $client->call($session, 'sales_order.info', '100000001');
+$invoice_info = $client->call($session, 'sales_order.info', $_GET['id']);
 $ship=$invoice_info['shipping_address'];
 $add=$invoice_info['billing_address'];
 $product=$invoice_info['items'][0];
