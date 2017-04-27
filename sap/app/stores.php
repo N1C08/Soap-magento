@@ -13,18 +13,18 @@ $stores = $client->call($session, 'store.list');
       </div>
   </div>
   <!-- /.row -->
+  <!-- Projects Row -->
+  <div class="row">
 <?php 
 	foreach ($stores as $store) {
 ?>
-  <!-- Projects Row -->
-  <div class="row">
       <div class="col-md-3 portfolio-item">
           <a href="#">
               <img class="img-responsive" src="img/mage.png" alt="">
               <p>Nom: <?=$store['name']?></p>
           </a>
       </div>
-  </div>
   <?php }?>
+  </div>
 </div>
 <hr>

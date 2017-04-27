@@ -12,9 +12,7 @@ $products = $client->call($session, 'catalog_product.list');
 <h2>Inventaire Produits</h2>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-<form method="post" name="update" action="put_json.php">
-<button type="submit"  name="qty" class="btn btn-default">Update</button>
-</form> 
+<button type="submit" name="qty" class="btn btn-default">Update</button><a class="btn btn-primary" href="soap_put_json.php" role="button">Link</a>
 <table id="myTable">
   <tr class="header">
     <th style="width:33%;">Sku</th>
@@ -37,6 +35,4 @@ $products = $client->call($session, 'catalog_product.list');
 <?php }  ?>
 </table>
 </div>
-<?php
-?>
 <!--===== END OF INVENTORY =====-->

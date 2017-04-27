@@ -6,13 +6,20 @@ $session = $client->login('SAP', 'cordonelec');
 // demander le stock du $sku
 /*$sku = array( 
                 array('sku'=>'appiph5s32','qty'=>'5000'),
-                array('sku'=>'sku_test','qty'=>'110'),
+                array('sku'=>'sku2mtest','qty'=>'110'),
                 array('sku'=>'appiph5s16','qty'=>'118')
                 );*/
 
+$list=$client->call($session, 'catalog_product.list' );
+//var_dump($list);
+foreach($list as $prod )
+{
+    $alls=$prod['product_id'];
+    var_dump($alls);
 
-var_dump($client->call($session, 'product_stock.list' ));
 
+$result = $client->call($session, 'cataloginventory_stock_item.list', $alls);
+var_dump($result);}
 // appeler le .json qui contient les sku + qty 
 
 $productInfo = file_get_contents('json/update/products3.json');
@@ -25,20 +32,21 @@ var_dump($productInfo2);
 
 // envoyer les sku + qty et les mettre a jour
 
-$start = microtime(true);
+//$start = microtime(true);
 foreach($productInfo2 as $product )
 {
     $calls[] = array('product_stock.update', array($product['sku'], array('qty'=>$product['qty'])));
+    //var_dump($calls);
 }
 
  //  multicall sending 
  // 3 est le nbre de produits intégré au request  foreach(array_chunk($calls, 3) , on peut mettre le nombre total de produits  
 
- foreach(array_chunk($calls, 3) as $skuChunk)
+ /*foreach(array_chunk($calls, 3) as $skuChunk)
   {
      $result = $client->multiCall($session, $skuChunk);
   }
-  echo $time_elapsed_secs = microtime(true) - $start; // temps ecoulé pour l'operation.
+  echo $time_elapsed_secs = microtime(true) - $start; */// temps ecoulé pour l'operation.
 
  //  finir la session
 

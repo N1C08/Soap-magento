@@ -1,23 +1,20 @@
 <?php 
 require 'cnx/cnx.php';
 
-$client= new SoapClient('http://nicolasb.wanalike.fr/magento/index.php/api/soap/?wsdl'); // PATH_API_MAGENTO = http://nom_de_domaine/magento/api/soap/?wsdl
-$session = $client->login('SAP', 'cordonelec'); // connexion au webservice
-
-$result = $client->call($session, 'sales_order.info', '100000001');
-$ship=$result['shipping_address'];
-$add=$result['billing_address'];
-$product=$result['items'][0];
-$pay=$result['payment'];
-$history=$result['status_history'];
-//var_dump($result);
+$invoice_info = $client->call($session, 'sales_order.info', '100000001');
+$ship=$invoice_info['shipping_address'];
+$add=$invoice_info['billing_address'];
+$product=$invoice_info['items'][0];
+$pay=$invoice_info['payment'];
+$history=$invoice_info['status_history'];
+//var_dump($invoice_info);
 ?>
 
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
     		<div class="invoice-title">
-    			<h2><?=$result['store_name']?></h2><h3 class="pull-right">Commande n°<?=($result['increment_id']);?></h3>
+    			<h2><?=$invoice_info['store_name']?></h2><h3 class="pull-right">Commande n°<?=($invoice_info['increment_id']);?></h3>
     		</div>
     		<hr>
     		<div class="row">
@@ -49,13 +46,13 @@ $history=$result['status_history'];
     				<address>
     					<strong>Réglement:</strong><br>
     					Visa ending **** 4242<br>
-    					<?=$result['customer_email']?>
+    					<?=$invoice_info['customer_email']?>
     				</address>
     			</div>
     			<div class="col-xs-6 text-right">
     				<address>
     					<strong>Date d'achat:</strong><br>
-    					<?=$result['created_at']?><br><br>
+    					<?=$invoice_info['created_at']?><br><br>
     				</address>
     			</div>
     		</div>
