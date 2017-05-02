@@ -25,6 +25,9 @@ h3 span{
 /*======== END OF GLOBAL ========*/
 
 /*======== NAVBAR ======*/
+#log{
+  outline: none;
+}
 li a span{
   color: green;
 }

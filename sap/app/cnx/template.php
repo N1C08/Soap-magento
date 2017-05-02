@@ -36,7 +36,7 @@
       <li><a href="invoices.php">Facturation</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" type="button" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#" type="button" data-toggle="modal" id="log" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
