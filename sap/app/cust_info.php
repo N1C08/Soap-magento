@@ -4,6 +4,11 @@ require 'cnx/cnx.php';
 //===== LIST CUSTOMERS ===
 $result = $client->call($session, 'customer.info', $_GET['id']);
 //var_dump($result);
+if (empty($result)) {
+	$result=print_r('');
+}else{
+	$result;
+}
 $num=$result['customer_id'];
 $create=$result['created_at'];
 $link=$result['updated_at'];
@@ -27,15 +32,15 @@ if (empty($add)) {
 <div class="container">
 
     <h2>Compte client n°<?=$num?></h2>
-		<h5>Créer le: <?=$create?></h5> <h5>Dernière modification: <?=$link?></h5>
+		<h5>Créer le: <span><?=$create?></span></h5> <h5>Dernière modification: <span><?=$link?></span></h5>
    		<ul>
-   			<li>Prénom: <?=$firstname?></li>
-   			<li>Nom: <?=$name?></li>
-   			<li>Email: <?=$mail?></li>
-   			<li>Téléphone: <?=$info['telephone']?></li>
-   			<li>Adresse: <?=$info['street']?></li>
-   			<li>Ville: <?=$info['city']?></li>
-   			<li>Region: <?=$info['region']?></li>
-   			<li>Pays: <?=$info['country_id']?></li>
+   			<li><span>Prénom:</span> <?=$firstname?></li>
+   			<li><span>Nom: </span><?=$name?></li>
+   			<li><span>Email: </span><?=$mail?></li>
+   			<li><span>Téléphone: </span><?=$info['telephone']?></li>
+   			<li><span>Adresse: </span><?=$info['street']?></li>
+   			<li><span>Ville: </span><?=$info['city']?></li>
+   			<li><span>Region: </span><?=$info['region']?></li>
+   			<li><span>Pays: </span><?=$info['country_id']?></li>
    		</ul>
 </div>
