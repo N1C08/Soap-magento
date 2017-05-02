@@ -57,17 +57,6 @@ $result = $client->call($session, 'order.list');
     } 
 ?>
 </table>
-<script>
-  function ouvreModale(pId){
-   jQuery.ajax({
-      type: "GET",
-      url: "invoice_info.php?id="+pId,
-      dataType: 'text', 
-       contentType: "application/x-www-form-urlencoded;charset=UTF-8",
-      beforeSend: function(xhr) {
-      xhr.overrideMimeType('text/html; charset=UTF-8');
-  }
-  });
-</script>
+
 <!--===== END OF LIST INVOICES ====-->
 </div>
