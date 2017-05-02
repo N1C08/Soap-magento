@@ -8,6 +8,7 @@ $cust = $client->call($session, 'customer.list');
 //===== END OF CUSTOMERS ===
 
 ?>
+
 <div class="container">
       <!--===== LIST CUSTOMER ====-->
 <h2>Listes Clients</h2>
