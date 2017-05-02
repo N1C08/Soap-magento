@@ -1,8 +1,11 @@
+
+
 <?php
 
 require 'cnx/cnx.php';
               
 // continuation of process.php
+$sku = 'product';
 $qty = $_POST["qty"];
 $items = $_POST["id"];
 $stockItemData = array(
@@ -12,39 +15,20 @@ $result = $client->call($session,'product_stock.update',array(
         $items,
         $stockItemData ));
 
+$productqty=$client->call($session, 'product_stock.list', $items );
 
-/*alert'la quantité du produit a bien été modifié';*/
-
-
-
-header('location: products.php');
+$sku=$productqty[0]['sku'];
 
 
+echo "<script>alert('Votre $sku a bien été modifié avec une nouvelle quantité de $qty ')</script>";
+
+echo "<script type='text/javascript'>
+document.location.replace('products.php');</script>";
 
 
-// get the current Magento cart
-// $cart = Mage::getSingleton('checkout/cart');
 
-// foreach($items as $key => $value)
-// {
-// //    // call the Magento catalog/product model
-// //    $product = Mage::getModel('catalog/product')
-// //                      // set the current store ID
-// //                      ->setStoreId(Mage::app()->getStore()->getId())
-// //                      // load the product object
-// //                      ->load($key);
+/*alert("le SKU a bien été modifié");*/
 
-//    // start adding the product
-//    $cart->addProduct($product, array('qty' => $value));
-//    // save the cart
-//    $cart->save();
-
-//    // very straightforward, set the cart as updated
-//    Mage::getSingleton('checkout/session')->setCartWasUpdated(true);
-// }
-
-// // redirect to index.php
-// header("Location: index.php");
 
 ?>
 
