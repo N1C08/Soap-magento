@@ -7,11 +7,6 @@ $cust = $client->call($session, 'customer.list');
 //var_dump ($cust);
 //===== END OF CUSTOMERS ===
 
-//===== ADDRESS CUSTOMER =====
-$add = $client->call($session, 'customer_address.list', '1');
-  //var_dump ($add);
-//===== END OF ADDRESS =====
-
 ?>
 <div class="container">
       <!--===== LIST CUSTOMER ====-->
@@ -21,11 +16,11 @@ $add = $client->call($session, 'customer_address.list', '1');
 
 <table id="myTable">
   <tr class="header">
-    <th style="width:25%;">N° client</th>
-    <th style="width:25%;">Prénom</th>
-    <th style="width:25%;">Nom </th>
-    <th style="width:25%;">Email</th>
-  <!--  <th style="width:25%;">Fiche client</th> -->
+    <th style="width:10%;">N° client</th>
+    <th style="width:26%;">Prénom</th>
+    <th style="width:26%;">Nom </th>
+    <th style="width:26%;">Email</th>
+    <th style="width:12%;">Fiche client</th> 
   </tr>
   
   
@@ -36,7 +31,7 @@ $add = $client->call($session, 'customer_address.list', '1');
         <td><?=$custs['firstname']?></td>    
         <td><?=$custs['email']?></td>   
         <td>
-        <!--  <a href="cust_info.php" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</a> -->
+          <a href="cust_info.php?id=<?=$custs['customer_id']?>" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Voir</a> 
           <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-lg">

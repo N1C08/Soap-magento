@@ -1,5 +1,4 @@
 <?php
-
 require 'cnx/cnx.php';
               
 // continuation of delete.php

@@ -4,11 +4,15 @@
 <head>
   <title>Interface Magento/ERP</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
-<!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
 
+<script src='js/filter.js'></script>
+<!-- jQuery library -->
+<script src="js/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -33,10 +37,4 @@
   </div>
 </nav>
 </body>
-
-<script src='js/filter.js'></script>
-<!-- jQuery library -->
-<script src="js/jquery.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 </html>

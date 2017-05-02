@@ -1,5 +1,3 @@
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 <?php 
 require 'cnx/cnx.php';
 //require 'cnx/template.php';

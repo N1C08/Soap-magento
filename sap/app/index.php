@@ -1,4 +1,5 @@
-<?php require 'cnx/template.php';?>
+<?php 
+require 'cnx/template.php';?>
 <h2>Gestion produit</h2>
 <h3>Boutique Magento <span><=></span> SAP</h3>
 <div class="row">
