@@ -1,6 +1,9 @@
+<script src="js/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 <?php 
 require 'cnx/cnx.php';
-require 'cnx/template.php';
+//require 'cnx/template.php';
 
 //===== INVOICES INFOS ====
 

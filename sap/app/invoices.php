@@ -32,8 +32,8 @@ $result = $client->call($session, 'order.list');
         <td><?=$order['billing_name']?></td>    
         <td><?=$order['status']?></td> 
         <td>
-          <a href="invoice_info.php?id=<?=$order['increment_id']?>" type="button" class="btn btn-info">Voir</a>
-         <!--data-toggle="modal" data-target="#myModal"-->
+          <a href="invoice_info.php?id=<?=$order['increment_id']?>" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Voir</a>
+         <!--data-toggle="modal" data-target="#myModal" invoice_info.php?id=<?=$order['increment_id']?>-->
 
           <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
@@ -56,7 +56,18 @@ $result = $client->call($session, 'order.list');
 <?php     
     } 
 ?>
-  
 </table>
+<script>
+  function ouvreModale(pId){
+   jQuery.ajax({
+      type: "GET",
+      url: "invoice_info.php?id="+pId,
+      dataType: 'text', 
+       contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+      beforeSend: function(xhr) {
+      xhr.overrideMimeType('text/html; charset=UTF-8');
+  }
+  });
+</script>
 <!--===== END OF LIST INVOICES ====-->
 </div>
