@@ -1,5 +1,3 @@
-
-
 <?php
 
 require 'cnx/cnx.php';

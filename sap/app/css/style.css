@@ -19,12 +19,15 @@ h5 span{
 .container h2{
   text-align: center;
 }
-span{
+h3 span{
   color: red;
 }
 /*======== END OF GLOBAL ========*/
 
 /*======== NAVBAR ======*/
+li a span{
+  color: green;
+}
 /*======== END OF NAVBAR =====*/
 
 /*======== ORDER_INFO ========*/
