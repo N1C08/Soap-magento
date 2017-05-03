@@ -1,3 +1,5 @@
+
+
 <?php
 
 require 'cnx/cnx.php';
@@ -18,7 +20,7 @@ $productqty=$client->call($session, 'product_stock.list', $items );
 $sku=$productqty[0]['sku'];
 
 
-echo "<script>alert('Votre $sku a bien été modifié avec une nouvelle quantité de $qty ')</script>";
+echo "<script>alert('Votre SKU  $sku  a bien été modifié avec une nouvelle quantité de $qty ')</script>";
 
 echo "<script type='text/javascript'>
 document.location.replace('products.php');</script>";
